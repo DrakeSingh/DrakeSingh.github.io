@@ -62,9 +62,10 @@ var AC=window.applicationCache;
 UA = navigator.userAgent.substring(navigator.userAgent.indexOf("6.72(") + 28, navigator.userAgent.indexOf(") Apple"));
 
 if(a==0)
-{;}
+{sts.innterHTML=a.toString();}
 else{
 sub.innerHTML="";
+sts.innterHTML=a.toString();
 if(UA != "6.72"){msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Already Jailbroken<span style='color:yellow;'> ✔ </span>- <span style='color:lightgreen;'>Press Circle To Exit</span></h1>";}
 else{load_exploit_HEN();}
 }
