@@ -1,17 +1,14 @@
-﻿<html manifest="cache.manifest">
+﻿<html><!--  -->
 <head>
 <title>Auto-HEN</title>
-
 <script>
 function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));
-window.topmsg.innerHTML="Installing Offline Cache: " + Percent + "%";}
-function DisplayCacheProgress(){setTimeout(function(){window.topmsg.innerHTML="Cache Installed Successfully";},1000);
-setTimeout(function(){window.topmsg.innerHTML="Now Close And Re-Open Your Browser";},3000);}
-window.applicationCache.addEventListener("progress",DLProgress,false);
-window.applicationCache.oncached=function(e){DisplayCacheProgress();};
-window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+window.msgs.innerHTML="Installing Offline Cache: " + Percent + "%";}
+function DisplayCacheProgress(){
+setTimeout(function(){window.msgs.innerHTML="Cache Installed Successfully";},1000);
+setTimeout(function(){window.msgs.innerHTML="Now Close And Re-Open Your Browser";},3000);
+}
 </script>
-  
 <script src="exp_webkit.js"></script>
 
 <style>
@@ -45,27 +42,27 @@ text-decoration:none;
 
 <div style="text-align:center;padding:130px;">
 <h5 id=topmsg></h5>
-<h5 id=sts>status</h5>
-  
 <h1 style='color:lightblue;font-size:20px;text-align:center;'>DS</h1>
 <h2 id=msgs>Auto-HEN</h2>
 <h6 id=sub>Click on PS Logo to Cache.</h6>
 </div>
+<!--
 <div style="position:fixed;left:0;bottom:2px;width:100%;font-size:11px;">
 Credit : Leeful, Modified from leeful v6 host
 </div>
+-->
 <script>
 
 var AC=window.applicationCache;
 UA = navigator.userAgent.substring(navigator.userAgent.indexOf("6.72(") + 28, navigator.userAgent.indexOf(") Apple"));
 
-if(AC.status==AC.UNCACHED){
-  sub.innerHTML="";
-  sts.innerHTML="IF";
-  if(UA != "6.72"){msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Already Jailbroken<span style='color:yellow;'> ✔ </span>- <span style='color:lightgreen;'>Press Circle To Exit</span></h1>";}
-  else{load_exploit_HEN();}
+if(AC.status==AC.UNCACHED)
+{;}
+else{
+sub.innerHTML="";
+if(UA != "6.72"){msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Already Jailbroken<span style='color:yellow;'> ✔ </span>- <span style='color:lightgreen;'>Press Circle To Exit</span></h1>";}
+else{load_exploit_HEN();}
 }
-else{sts.innerHTML="ELSE";}
 
 function load_exploit_HEN(){
 msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Exploit And HEN ...</h1>";
