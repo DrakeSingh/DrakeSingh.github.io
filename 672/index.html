@@ -3,14 +3,14 @@
 <title>Auto-HEN</title>
   
 <script>
+var a=0;
 function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));
 window.topmsg.innerHTML="Installing Offline Cache: " + Percent + "%";}
 function DisplayCacheProgress(){setTimeout(function(){window.topmsg.innerHTML="Cache Installed Successfully";},1000);
-setTimeout(function(){window.topmsg.innerHTML="Now Close And Re-Open Your Browser";},3000);}
+setTimeout(function(){window.topmsg.innerHTML="Now Close And Re-Open Your Browser";},3000);a=1;}
 window.applicationCache.addEventListener("progress",DLProgress,false);
 window.applicationCache.oncached=function(e){DisplayCacheProgress();};
 window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
-  }
 </script>
   
 <script src="exp_webkit.js"></script>
@@ -50,17 +50,17 @@ text-decoration:none;
 <h2 id=msgs>Auto-HEN</h2>
 <h6 id=sub>Click on PS Logo to Cache.</h6>
 </div>
-<!--
+
 <div style="position:fixed;left:0;bottom:2px;width:100%;font-size:11px;">
 Credit : Leeful, Modified from leeful v6 host
 </div>
--->
+
 <script>
 
 var AC=window.applicationCache;
 UA = navigator.userAgent.substring(navigator.userAgent.indexOf("6.72(") + 28, navigator.userAgent.indexOf(") Apple"));
 
-if(AC.status==AC.UNCACHED)
+if(a==1)
 {;}
 else{
 sub.innerHTML="";
