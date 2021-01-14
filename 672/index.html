@@ -58,8 +58,8 @@ Credit : Leeful, Modified from leeful v6 host
 
 var AC=window.applicationCache;
 UA = navigator.userAgent.substring(navigator.userAgent.indexOf("6.72(") + 28, navigator.userAgent.indexOf(") Apple"));
-status.innerHTML=AC.status;
-if(AC.status==AC.UPDATEREADY){
+//status.innerHTML=AC.status;
+if(AC.status==AC.IDLE){
   sub.innerHTML="";
   if(UA != "6.72"){msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Already Jailbroken<span style='color:yellow;'> ✔ </span>- <span style='color:lightgreen;'>Press Circle To Exit</span></h1>";}
   else{load_exploit_HEN();}
