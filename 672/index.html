@@ -61,10 +61,11 @@ UA = navigator.userAgent.substring(navigator.userAgent.indexOf("6.72(") + 28, na
 //status.innerHTML=AC.status;
 if(AC.status==AC.IDLE){
   sub.innerHTML="";
+  status.innerHTML="IF";
   if(UA != "6.72"){msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Already Jailbroken<span style='color:yellow;'> ✔ </span>- <span style='color:lightgreen;'>Press Circle To Exit</span></h1>";}
   else{load_exploit_HEN();}
 }
-else{;}
+else{status.innerHTML="ELSE";}
 
 function load_exploit_HEN(){
 msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Exploit And HEN ...</h1>";
