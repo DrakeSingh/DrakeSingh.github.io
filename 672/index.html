@@ -45,7 +45,7 @@ text-decoration:none;
 
 <div style="text-align:center;padding:130px;">
 <h5 id=topmsg></h5>
-<h5 id=status>status</h5>
+<h5 id=sts>status</h5>
   
 <h1 style='color:lightblue;font-size:20px;text-align:center;'>DS</h1>
 <h2 id=msgs>Auto-HEN</h2>
@@ -58,14 +58,14 @@ Credit : Leeful, Modified from leeful v6 host
 
 var AC=window.applicationCache;
 UA = navigator.userAgent.substring(navigator.userAgent.indexOf("6.72(") + 28, navigator.userAgent.indexOf(") Apple"));
-//status.innerHTML=AC.status;
+
 if(AC.status==AC.UNCACHED){
   sub.innerHTML="";
-  status.innerHTML="IF";
+  sts.innerHTML="IF";
   if(UA != "6.72"){msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Already Jailbroken<span style='color:yellow;'> ✔ </span>- <span style='color:lightgreen;'>Press Circle To Exit</span></h1>";}
   else{load_exploit_HEN();}
 }
-else{status.innerHTML="ELSE";}
+else{sts.innerHTML="ELSE";}
 
 function load_exploit_HEN(){
 msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Exploit And HEN ...</h1>";
