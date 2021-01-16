@@ -25,8 +25,15 @@ if(AC.status==AC.UNCACHED)
 {;}
 else{
 sub.innerHTML="";
-if(UA != "6.72"){msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Already Jailbroken<span style='color:yellow;'> ✔ </span>- <span style='color:lightgreen;'>Press Circle To Exit</span></h1>";}
-else{load_exploit_HEN();}
+var jb=false;
+if(UA == "6.72"){
+jb=true;
+load_exploit_HEN();
+}
+else{
+if(jb == true){msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Already Jailbroken<span style='color:yellow;'> ✔ </span>- <span style='color:lightgreen;'>Press Circle To Exit</span></h1>";}
+else{msgs.innerHTML="You are on FW v"+UA;}
+}
 }
 
 function load_exploit_HEN(){
