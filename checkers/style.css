@@ -1,6 +1,7 @@
 body{
 	background: lightgray;	
 	font-family: "Verdana";
+	font-size: 2vw;
 }
 section{
 	text-align: center;
@@ -8,18 +9,18 @@ section{
 .game-container{
 	display: grid;
 	grid-template-columns: repeat(7, auto);
-	width: 475px;
-	margin: 50px auto;
+	width: 35vw;
+	margin: 7vw 7vw 0 31vw;
 }
 .cell{
 	font-family: "Verdana";
-	font-size: 55px;
-	width: 65px;
-	height: 65px;
+	font-size: 5vw;
+	width: 5vw;
+	height: 5vw;
 	border: 1px solid #333333;
 	box-shadow: 0 0 0 1px #333333;
 	cursor: pointer;
-	line-height: 65px;
+	line-height: 5vw;
 }
 .borderColorCoral{
   	background-color: coral;
