@@ -189,7 +189,7 @@ function CheckWinner(){
 	winCon = [];
 	let a = 0;
 	for (var i = 0; i < winner.length; i++){
-		if(winner[i] != ""){
+		if(winner[i] == "O"){
 			a++;
 			CheckNeighbour(convertIntToID[i]);
 		}
