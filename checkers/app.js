@@ -9,11 +9,18 @@ const menu = document.querySelector(".menu");
 const navOpen = document.querySelector(".nav-open");
 const menuHide = document.querySelector(".menuHide");
 const menuLinks = document.querySelectorAll(".menuLink");
+const dotText = document.querySelectorAll(".dotText");
 
 slides.forEach((slide, index) => {
 	slide.addEventListener("click", function(){
 		changeDots(index);
 		nextPage(index);
+	});
+	slide.addEventListener("mouseenter", function(){
+		showText(index, 1);
+	});
+	slide.addEventListener("mouseleave", function(){
+		showText(index, 0);
 	});
 });
 
@@ -60,6 +67,11 @@ function nextPage(nextIndex){
 		t.fromTo(next, {y:"-120%"}, { y: "0%", duration: 0.5, delay: -0.5});
 	}
 	currentIndex = nextIndex;
+}
+
+function showText(index, value){
+	console.log(dotText[index]);
+	t.to(dotText[index], {opacity: value, duration: 0.3})
 }
 
 t2.to(menuHide, {zIndex: 1, duration: 0});

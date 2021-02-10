@@ -1,3 +1,7 @@
+@font-face {
+  font-family: Poppins;
+  src: url(fonts/Poppins-Regular.ttf);
+}
 *{
 	margin: 0;
 	padding: 0;
@@ -118,9 +122,13 @@ nav div h6{
 	align-items: center;
 	justify-content: space-between;
 }
+.dots div{
+	font-size: 14px;
+	padding: 30px 0px;
+}
 .dots h3{
-	font-size: 16px;
-	padding: 30px;
+	padding: 0 30px;
+	opacity: 0;
 }
 .dots svg{
 	cursor: pointer;
