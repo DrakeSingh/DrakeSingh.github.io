@@ -71,7 +71,7 @@ function nextPage(nextIndex){
 
 function showText(index, value){
 	console.log(dotText[index]);
-	t.to(dotText[index], {opacity: value, duration: 0.3})
+	gsap.to(dotText[index], {opacity: value, duration: 0.3})
 }
 
 t2.to(menuHide, {zIndex: 1, duration: 0});
