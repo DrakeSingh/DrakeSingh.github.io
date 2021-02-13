@@ -70,7 +70,6 @@ function nextPage(nextIndex){
 }
 
 function showText(index, value){
-	console.log(dotText[index]);
 	gsap.to(dotText[index], {opacity: value, duration: 0.3})
 }
 
