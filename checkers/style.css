@@ -7,9 +7,10 @@ body{
 	overflow: hidden;
 }
 /*Main Block*/
+
 .super{
 	color: white;
-	background:radial-gradient(#414345, #232526);
+	background:radial-gradient(#232526, #171717);
 }
 /*Navigations */
 .nav-container{
@@ -34,7 +35,7 @@ nav div h6{
 }
 .logo{
 	font-size:28px;
-	color: coral;
+	color: #FB4348;
 	cursor: default;
 }
 .links{
@@ -71,7 +72,7 @@ nav div h6{
 	justify-items: center;
 	align-items: center;
 	transform: translateY(-100%);
-	background: coral;
+	background: #FB4348;
 }
 /*Menu Icon*/
 .menu{
@@ -109,7 +110,7 @@ nav div h6{
 }
 .play-button{
 	font-family: 'Poppins', sans-serif;
-	background: coral;
+	background: #FB4348;
 	border: none;
 	color: white;
 	font-size: 1.5rem;
@@ -183,7 +184,7 @@ section{
 }
 .game-restart{
 	font-family: 'Poppins', sans-serif;
-	background: coral;
+	background: #FB4348;
 	border: none;
 	color: white;
 	font-size: 1rem;
@@ -193,7 +194,7 @@ section{
 	cursor: pointer;
 }
 .borderColorCoral{
-  	background-color: coral;
+  	background-color: #FB4348;
 }
 .borderColorGreen{
 	background-color: limegreen;
